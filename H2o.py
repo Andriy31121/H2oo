@@ -11,7 +11,7 @@ WIDTH = 1000
 HEIGHT = 600
 def star_game(name, address, port)
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect(("address", port))
+    client.connect(("address", int(port)))
 
     player_id = client.recv(1024).decode()
     other_players_data = {}
